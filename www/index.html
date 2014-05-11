@@ -18,26 +18,379 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/logo-nav.css" rel="stylesheet">
+	<title>Here@Help Client</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+			<a class="navbar-brand logo-nav" href="index.php">
+				<img src="img/here_help.png">
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+
+			<ul class="nav navbar-nav navbar-right">
+
+			</ul>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+</nav>
+
+<div class="container">
+
+<div class="row">
+<div class="col-lg-12">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Report</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="selectbasic">Type of Disaster</label>
+
+	<div class="col-md-5">
+		<select name="selectbasic" class="form-control" id="selectbasic">
+			<option value="1">Earthquake</option>
+			<option value="2">Flood</option>
+			<option value="">Storm</option>
+			<option value="">Landslide</option>
+			<option value="">Fire</option>
+			<option value="">Structural Collapse</option>
+			<option value="">Explosion</option>
+			<option value="">Tsunami</option>
+			<option value="">Tornadoes</option>
+			<option value="">Stampede</option>
+			<option value="">Volcanic Eruption</option>
+			<option value="">Alien Invasion</option>
+			<option value="">Asteroid Impact</option>
+		</select>
+	</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="textinput">Estimated Number of Dead People</label>
+
+	<div class="col-md-4">
+		<input name="textinput" class="form-control input-md" id="textinput" required="" type="text" placeholder="- - - - - -">
+
+	</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="textinput">Estimated Number of Alive People</label>
+
+	<div class="col-md-4">
+		<input name="textinput" class="form-control input-md" id="textinput" required="" type="text" placeholder="- - - - - -">
+
+	</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="textinput">Contact Person</label>
+
+	<div class="col-md-4">
+		<input name="textinput" class="form-control input-md" id="textinput" type="text" placeholder="insert name here">
+
+	</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="textinput">Contact Number</label>
+
+	<div class="col-md-4">
+		<input name="textinput" class="form-control input-md" id="textinput" required="" type="text" placeholder="insert number here">
+
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Consumables</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Food
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				Water
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Toiletries
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Clothes</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Infant
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				Teen
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Child
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-3">
+				<input name="checkboxes" id="checkboxes-3" type="checkbox" value="">
+				Adult
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Healthcare</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Surgeon
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				Physician
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Midwife
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-3">
+				<input name="checkboxes" id="checkboxes-3" type="checkbox" value="">
+				Nurse
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-4">
+				<input name="checkboxes" id="checkboxes-4" type="checkbox" value="">
+				Pediatrician
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Shelter</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Blankets
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				Mattresses
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Pillows
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Communications</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Internet
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				Cellular Phones
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Radio/TV
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">Power Supply</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Generators
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				General Purpose Batteries
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Car Batteries
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-3">
+				<input name="checkboxes" id="checkboxes-3" type="checkbox" value="">
+				Cellular Phone Batteries
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="checkboxes">equipments</label>
+
+	<div class="col-md-4">
+		<div class="checkbox">
+			<label for="checkboxes-0">
+				<input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+				Flashlight
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-1">
+				<input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+				First Aid Kits
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-2">
+				<input name="checkboxes" id="checkboxes-2" type="checkbox" value="">
+				Cold Storage
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-3">
+				<input name="checkboxes" id="checkboxes-3" type="checkbox" value="">
+				Body Bags
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-4">
+				<input name="checkboxes" id="checkboxes-4" type="checkbox" value="">
+				Wood Saws
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-5">
+				<input name="checkboxes" id="checkboxes-5" type="checkbox" value="">
+				Excavators
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-6">
+				<input name="checkboxes" id="checkboxes-6" type="checkbox" value="">
+				Drillers
+			</label>
+		</div>
+		<div class="checkbox">
+			<label for="checkboxes-7">
+				<input name="checkboxes" id="checkboxes-7" type="checkbox" value="">
+				Bulldozers
+			</label>
+		</div>
+	</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+	<label class="col-md-4 control-label" for="textinput">Others</label>
+
+	<div class="col-md-4">
+		<input name="textinput" class="form-control input-md" id="textinput" type="text" placeholder="ex. portalets, shovels">
+
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="container"><button class="btn btn-lg center-block">Submit Report</button></div>
+
+</div>
+
+</fieldset>
+</form>
+
+</div>
+</div>
+
+</div>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>
+</body>
 </html>
